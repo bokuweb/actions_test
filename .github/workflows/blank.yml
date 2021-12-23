@@ -8,14 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - uses: bokuweb/actions-test@pr
-        with: # Set the secret as an input
-          # secret: "${{ secrets.WR_TOKEN }}"
-          secret: "${{ secrets.GITHUB_TOKEN }}"
-          actual-directory-path: "actual"
-      - uses: actions/upload-artifact@v1
+      - uses: bokuweb/reg-actions@main
         with:
-          name: reg
-          path: __reg__
+          secret: "${{ secrets.GITHUB_TOKEN }}"
+          image-directory-path: "actual"
