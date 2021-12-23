@@ -8,11 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: bokuweb/reg-actions@dev
+      - uses: bokuweb/reg-actions@add-uploader
         with:
           secret: "${{ secrets.GITHUB_TOKEN }}"
           actual-directory-path: "actual"
-      - uses: actions/upload-artifact@v1
-        with:
-          name: reg
-          path: __reg__
