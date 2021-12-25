@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
-      - uses: bokuweb/reg-actions@main
+      - uses: bokuweb/reg-actions@use-exec
         with:
           secret: "${{ secrets.GITHUB_TOKEN }}"
           image-directory-path: "actual"
